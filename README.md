@@ -40,6 +40,9 @@ The `images` folder contains all the images used in your website. Feel free to a
 - **View the source code:** Right-click on any webpage and select "View Page Source" to see how other websites are built using HTML and CSS.
 - **Experiment and practice:** Don't be afraid to experiment with the code and explore different HTML features. Practice is key to solidifying your understanding.
 
+## Free Tip
+Use `w3c` HTML validator for checking any errors and warnings.
+
  ## Feel free to contribute to this repository by:
 
 - Creating pull requests to suggest improvements or additional learning resources.
