@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ghaniket Rajput">
+  <meta name="description" content="This page contains all the the things I am learning html">
+  <title>HTML</title>
+  <link rel="icon" href="image/download.png" type="image/x-icon">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header> <!--can be more than one per page-->
+    <!--header is a  semantic block element, semantic means it provides additional meaning rather than a generic divider to the code-->
+    <h1>My life and Vacation</h1>
+
+    <!--h1,h2..., p are all block elements -->
+    <!--a, em, strong, abbr, address are all inline elements -->
+
+    <nav aria-label="primary-navigation"> <!--can be more than one per page-->
+      <a href="#learning">Learning</a> |
+      <a href="#vacation">Vacation</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <hr>
+ 
+
+  <main> <!--main is a semantic block element and is only one per page -->
+    <article id="learning">
+      <!--rather than section, article is optimized as this time we know what the content is about -->
+      <h2>I'm learning html</h2>
+
+      <section>
+        <h3>HTML5</h3>
+        <p>This is my fist page</p>
+
+        <figure>
+
+          <img src="image/htmllogo310X163.png" alt="HTML LOGO" title="HTML LOGO" width="400" height="300"
+            loading="lazy">
+
+          <figcaption>Kinda Looks Familiar...
+            <p>
+              An Example of HTML5 code <br>
+              <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+            </p>
+          </figcaption>
+
+        </figure>
+      </section>
+      <section>
+        <h3>My daily schedule</h3>
+        <p>Let me tell you :</p>
+        <!--HTML entities starts with & and ends with ;-->
+        <ol>
+          <li>... I learn more about webnology.</li>
+          <li>... I practice coding.</li>
+          <li>... I plan out my day.</li>
+          <li>
+            ... I use resources from
+            <a target="_blank" href="https://www.youtube.com/watch?v=iMj-TbN7ydg"><abbr title="YOUTUBE">YT.</abbr></a>
+          </li>
+        </ol>
+        <aside> <!--it shows complimentary text that is not as much important as article-->
+          <details> <!-- deatils and summary work together for creating a hidden text for a text-->
+            <!--can also be used for quizzes or for extra details about product-->
+            <summary>
+              Guess the <mark> number of hours</mark> I code per day?
+            </summary>
+            <p>
+              <strong>Answer:</strong><time datetime="PT4H"></time> 4-5 hours per day.
+              <!--time element is used to show the time in the page.-->
+
+
+            </p>
+          </details>
+
+        </aside>
+        <br>
+
+        <table>
+          <caption>My Daily Schedule</caption>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="2" scope="row">Morning</th>
+              <td>
+                <time datetime="08:00">8am-</time><time datetime="09:00">9am</time>
+              </td>
+              <td>Code</td>
+            </tr>
+            <tr>
+
+              <td>
+                <time datetime="09:00">9am-</time><time datetime="11:00">11am</time>
+              </td>
+              <td>Courses</td>
+            </tr>
+            <tr>
+              <th scope="row">Break</th>
+              <td>
+                <time datetime="11:00">11am-</time><time datetime="13:00">1pm</time>
+              </td>
+              <td>Lunch</td>
+            </tr>
+            <tr>
+              <th rowspan="2" scope="row">Evening to Night</th>
+              <td rowspan="2">All Other Times</td>
+              <td>Free Time</td>
+            </tr>
+            <tr>
+              <td>Sleep</td>
+
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Just Eat, Code, Sleep, Repeat...</td>
+            </tr>
+
+          </tfoot>
+
+        </table>
+      </section>
+    </article>
+
+    <hr>
+
+
+
+    <article id="vacation">
+      <h2>I'm also planning a vacation</h2>
+      <p>I've been working hard <em>really</em> need a getaway.</p>
+      <p>I live in Goa so i want to visit a beach.</p>
+
+      <section>
+        <h3>Place I'd like to Visit</h3>
+
+        <!--LAZY LOADING IS USED TO LOAD THE PAGE FASTER IN BROWSER AS MULTIPLE IMAGES LOADING AT THE SAME TIME WILL LEAD TO DELAY IN THE WEB PAGE LOADING-->
+        <ul>
+          <li>
+            <p>I've heard good things about Goa</p>
+            <figure>
+              <img src="image/vacation.jpg" alt="Vacation" title="Goa" height="300" width="400" loading="lazy">
+              <figcaption>Goa Resort Getaway...</figcaption>
+            </figure>
+
+          </li>
+          <li>
+            <p>I've heard good things about going here:</p>
+            <address>
+              <figure>
+                <img
+                  src="https://images.pexels.com/photos/457878/pexels-photo-457878.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt="Lakshadweep Beach" title="It's 2'o' clock in Lakshadweep" loading="lazy" width="400"
+                  height="300">
+                <figcaption>The Vibrance of Nature...</figcaption>
+              </figure>
+              <br>
+              Lakshdweep island, lakshdweep, India <br>
+              Sri Lankan Island, Sri Lanka <br>
+              maldives island, maldives <br>
+            </address>
+          </li>
+        </ul>
+      </section>
+
+      <!--ToDo: Add More Places-->
+      <section>
+        <h3>Places I want to Avoid</h3>
+        <dl>
+          <dt>North Pole</dt>
+          <dd>This is way too <strong>cold!!</strong></dd>
+          <dt>South Pole</dt>
+          <dd>This is also <strong>cold!!</strong></dd>
+        </dl>
+      </section>
+    </article>
+    <article id="contact"> </article>
+
+    <form action="https://httpbin.org/get" method="get">
+      <h2>Contact Me</h2>
+      <p>I would really like to hear from you!!...</p>
+      <p> <label for="firstname">First Name:</label>
+        <input type="text" , name="firstname" id="firstname" placeholder="Jane" autocomplete="on" required="true"
+          autofocus>
+      </p>
+
+      <!--autofocus allows you to type instantly as the page loads but used in only one of input fields-->
+
+      <p> <label for="lastname">Last Name:</label>
+        <input type="text" , name="lastname" id="lastname" placeholder="Roy" autocomplete="on" required="true">
+      </p>
+
+      <p> <label for="Password">Password:</label>
+        <input type="password" , name="Password" id="Password" placeholder="secret"  required="true">
+      </p>
+
+      <p> <label for="PhoneNunber">Phone:</label>
+        <input type="tel" , name="PhoneNunber" id="PhoneNunber" placeholder="5555555555"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+        <!--regex is used to match the pattern of the phone number-->
+      </p>
+
+      <p> <label for="decade">Favourite decade:</label>
+        <input type="number" , name="decade" id="decade" min="1900" max="2020" step="10" value="1900" >
+        <!--regex is used to match the pattern of the phone number-->
+      </p>
+
+
+
+
+
+    </form>
+  </main>
+  <hr>
+
+  <footer> <!--can be more than one per page-->
+    <p>
+      &lt;&lt;&lt; &copy; <a href="about.html" target="_blank"> Ghaniket Rajput</a> &gt;&gt;&gt;
+    </p>
+    <p><a href="#">Back to Top</a></p>
+  </footer>
+</body>
+
+</html>
