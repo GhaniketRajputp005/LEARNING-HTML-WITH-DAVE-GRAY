@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="author" content="Ghaniket Rajput">
   <meta name="description" content="This page contains all the the things I am learning html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>HTML</title>
   <link rel="icon" href="image/download.png" type="image/x-icon">
   <link rel="stylesheet" href="main.css">
@@ -25,7 +27,7 @@
     </nav>
   </header>
   <hr>
- 
+
 
   <main> <!--main is a semantic block element and is only one per page -->
     <article id="learning">
@@ -174,6 +176,7 @@
       </section>
 
       <!--ToDo: Add More Places-->
+
       <section>
         <h3>Places I want to Avoid</h3>
         <dl>
@@ -184,41 +187,162 @@
         </dl>
       </section>
     </article>
+    <hr>
     <article id="contact"> </article>
 
+    <h2>Contact Me</h2>
+    <p>I would really like to hear from you!!...</p>
+    <!-- in form
+     for -> to match label with input
+     id -> to match input with label
+     name -> to group elements
+     type -> the input type
+     value -> value to be sent to server(radio,checkbox,option,datalist) -->
+
     <form action="https://httpbin.org/get" method="get">
-      <h2>Contact Me</h2>
-      <p>I would really like to hear from you!!...</p>
-      <p> <label for="firstname">First Name:</label>
-        <input type="text" , name="firstname" id="firstname" placeholder="Jane" autocomplete="on" required="true"
-          autofocus>
-      </p>
+      <fieldset>
+        <legend>Personal Details:</legend>
 
-      <!--autofocus allows you to type instantly as the page loads but used in only one of input fields-->
+        <p> <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" id="firstname" placeholder="Jane" autocomplete="on" required autofocus>
+        </p>
 
-      <p> <label for="lastname">Last Name:</label>
-        <input type="text" , name="lastname" id="lastname" placeholder="Roy" autocomplete="on" required="true">
-      </p>
+        <!--autofocus allows you to type instantly as the page loads but used in only one of input fields-->
 
-      <p> <label for="Password">Password:</label>
-        <input type="password" , name="Password" id="Password" placeholder="secret"  required="true">
-      </p>
+        <p> <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" id="lastname" placeholder="Roy" autocomplete="on">
+        </p>
 
-      <p> <label for="PhoneNunber">Phone:</label>
-        <input type="tel" , name="PhoneNunber" id="PhoneNunber" placeholder="5555555555"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-        <!--regex is used to match the pattern of the phone number-->
-      </p>
-
-      <p> <label for="decade">Favourite decade:</label>
-        <input type="number" , name="decade" id="decade" min="1900" max="2020" step="10" value="1900" >
-        <!--regex is used to match the pattern of the phone number-->
-      </p>
+        <!--input tag doesn't have a closing tag-->
 
 
+        <p> <label for="Password">Password:</label>
+          <input type="password" name="Password" id="Password" placeholder="secret">
+        </p>
 
+        <p> <label for="PhoneNunber">Phone:</label>
+          <input type="tel" name="PhoneNunber" id="PhoneNunber" placeholder="5555555555"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
 
+          <!--regex is used to match the pattern of the phone number-->
+
+        </p>
+
+        <p> <label for="decade">Favourite decade:</label>
+          <input type="number" name="decade" id="decade" min="1900" max="2020" step="10" value="1900">
+
+        </p>
+        <!--    <p>
+        <label for="coffee">Favourite Coffee:</label>
+        <select name="coffee" id="coffee" multiple size="3">
+          <optgroup label="Coffee">
+          <option value="regualr coffee">Regular Coffee</option>
+          <option value="iced coffee">Iced Coffee</option>
+        </optgroup>
+        <optgroup label="Espresso Drinks">
+          <option value="latte" selected>Latte</option>
+          <option value="Cappuccino">Cappuccino</option>
+          <option value="Americano">Americano</option>
+        </optgroup>
+          <option value="Others">Others</option>
+        </select>
+      </p> -->
+        <p>
+          <label for="coffee"> Favourite Cofee:</label>
+          <input type="text" name="coffee" id="coffee" list="coffee-list">
+          <datalist id="coffee-list">
+            <option value="coffee">
+            <option value="iced coffee">
+            <option value="latte">
+            <option value="Cappuccino">
+            <option value="Americano">
+            <option value="Others">
+          </datalist>
+        </p>
+
+        <p>
+          <label for="gender">Gender:</label>
+          <select name="gender" id="gender" multiple size="2">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="trans">Transgender</option>
+            <option value="Others">Others</option>
+          </select>
+        </p>
+
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>What is your favourite food?</legend>
+
+        <p> <input type="radio" id="pizza" name="food" value="pizza">
+          <label for="pizza">Pizza</label>
+        </p>
+
+        <!-- the value attribute represents the value that will be sent to the server when the form is submitted -->
+
+        <p>
+          <input type="radio" name="food" id="tacos" value="tacos">
+          <label for="tacos">Tacos</label>
+        </p>
+        <p>
+          <input type="radio" name="food" id="other" value="others">
+          <label for="other">Others</label>
+        </p>
+
+      </fieldset>
+      <!--as the name attrib. is same for all of the choices then only one them will get selected and if name attrib. is different for each one of them ,multiple selections can be made-->
+      <br>
+
+      <fieldset>
+        <legend>Do you have Pets?</legend>
+        <p>
+          <input type="checkbox" name="Dog" id="Dog" value="Dog">
+          <label for="Dog">Dog</label>
+        </p>
+        <p>
+          <input type="checkbox" name="cat" id="cat" value="cat">
+          <label for="cat">cat</label>
+        </p>
+        <p>
+          <input type="checkbox" name="fish" id="fish" value="fish">
+          <label for="fish">Fish</label>
+        </p>
+        <p>
+          <input type="checkbox" name="others" id="otherpet" value="other">
+
+          <!-- NOTE  we cannot use the id "others" here coz id must be unique in the page -->
+
+          <label for="otherpet">Others</label>
+        </p>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Send Me a Note...</legend>
+        <label for="message">Message me</label><br>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type Your Message here!!!"></textarea>
+      </fieldset>
+      <br>
+
+      &nbsp;&nbsp;&nbsp; <button type="submit">Submit(Get) </button>
+      &nbsp;&nbsp;
+      <button type="reset">Reset </button>
+      &nbsp;&nbsp;
+      <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Submit(Post)</button>
+
+      <!-- <input type="button" value="Clear"> -->
+
+      <!-- above code just creates a button ,non functional  -->
+
+      <!-- <input type="submit" value="Login"> -->
+
+      <!-- above code creates button and gives it submitting functionality -->
+      <!-- input tag can also be used to create button but 
+        button itself provides more funciotnality -->
 
     </form>
+
   </main>
   <hr>
 

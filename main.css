@@ -1,28 +1,41 @@
+body,
 html {
-    font-size: 22px;
-}
+    font-size: 16px;
 
-body {
-    background-color: #000000;
+    background-color: #011222;
+    /*deep navy blue */
+    margin: 0;
+    padding: 0;
+
+
+
     color: #ffffff;
 
 }
-a{
-    color :aliceblue
+
+a {
+    color: aliceblue
 }
 
-a:visited{
+a:visited {
     color: rgb(1, 167, 167);
 }
- a:active{
+
+a:active {
     background-color: rgb(255, 255, 1);
 }
-a:hover{
+
+a:hover {
     color: rgb(255, 255, 1);
 }
-table,tr,td,th,caption{
+
+table,
+tr,
+td,
+th,
+caption {
     border: 1px solid #ffffff;
     border-collapse: collapse;
     padding: 0.5rem;
-    
+
 }
